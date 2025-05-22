@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Car Scraper",
+  "version": "1.0",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "host_permissions": ["https://www.copart.com/*", "https://www.iaai.com/*"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icons/icons8-car-50.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.copart.com/*", "https://www.iaai.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
